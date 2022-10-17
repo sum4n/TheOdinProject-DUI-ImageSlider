@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(35, 35, 35);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(0, 0, 0);
+    height: 800px;
+}
+
+.picFrame {
+    border: 1px solid purple;
+    width: 800px;
+    height: 400px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgContainer {
+    border: 1px solid plum;
+    width: 790px;
+    height: 390px;
+}
