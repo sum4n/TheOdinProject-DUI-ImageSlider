@@ -16,3 +16,16 @@ function showNextImage() {
         }
     }
 }
+
+function showPreviousImage() {
+    
+    const imgLive = document.getElementById("carousel");
+    const imgLiveSrc = imgLive.getAttribute("src").slice(9);
+
+    for (let i = imgListLength - 1; i > 0; i--) {
+        if (imgList[i] == imgLiveSrc) {
+            imgLive.src = `./images/${imgList[i-1]}`;
+            console.log(imgLive.src);
+        }
+    }
+}
