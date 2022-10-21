@@ -10,10 +10,18 @@ function showNextImage() {
     const imgLive = document.getElementById("carousel");
     const imgLiveSrc = imgLive.getAttribute("src").slice(9);
 
-    for(let i = 0; i < imgListLength - 1; i++) {
-        if (imgList[i] == imgLiveSrc) {
-            imgLive.src = `./images/${imgList[i+1]}`;
-        }
+    let liveIndex = imgList.indexOf(imgLiveSrc);
+    
+    if (liveIndex === 4) {
+        imgLive.src =  `./images/${imgList[0]}`;
+    } else {
+        imgLive.src = `./images/${imgList[liveIndex + 1]}`;
+    }
+    // change(rotate) animation name to show the animation.
+    if (imgLive.style.animationName === "myKey") {
+        imgLive.style.animationName = "nKey";
+    } else {
+        imgLive.style.animationName = "myKey";
     }
 }
 
@@ -22,10 +30,17 @@ function showPreviousImage() {
     const imgLive = document.getElementById("carousel");
     const imgLiveSrc = imgLive.getAttribute("src").slice(9);
 
-    for (let i = imgListLength - 1; i > 0; i--) {
-        if (imgList[i] == imgLiveSrc) {
-            imgLive.src = `./images/${imgList[i-1]}`;
-            console.log(imgLive.src);
-        }
+    let liveIndex = imgList.indexOf(imgLiveSrc);
+    
+    if (liveIndex === 0) {
+        imgLive.src =  `./images/${imgList[4]}`;
+    } else {
+        imgLive.src = `./images/${imgList[liveIndex - 1]}`;
+    }
+    
+    if (imgLive.style.animationName === "myKey") {
+        imgLive.style.animationName = "nKey";
+    } else {
+        imgLive.style.animationName = "myKey";
     }
 }

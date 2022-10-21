@@ -23,3 +23,17 @@ body {
     width: 790px;
     height: 390px;
 }
+
+#carousel {
+    animation: nKey 1s ease-in-out;
+}
+
+@keyframes myKey {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+@keyframes nKey {
+    from {opacity: 0;}
+    to {opacity: 100;}
+}
