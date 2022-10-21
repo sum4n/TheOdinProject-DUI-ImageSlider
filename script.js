@@ -4,6 +4,8 @@ const imgList = ['bird1.jpg', 'bird2.jpg', 'bird3.jpg',
 
 const imgListLength = imgList.length;
 
+const previousBtn = document.getElementById("previousBtn");
+const nextBtn = document.getElementById("nextBtn");
 
 function showNextImage() {
     
@@ -44,3 +46,11 @@ function showPreviousImage() {
         imgLive.style.animationName = "myKey";
     }
 }
+
+previousBtn.addEventListener("click", () => {
+    showPreviousImage();
+});
+
+nextBtn.addEventListener("click", () => {
+    showNextImage();
+})

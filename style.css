@@ -2,6 +2,7 @@ body {
     background-color: rgb(35, 35, 35);
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 2px solid rgb(0, 0, 0);
@@ -36,4 +37,11 @@ body {
 @keyframes nKey {
     from {opacity: 0;}
     to {opacity: 100;}
+}
+
+.arrowBtn {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid green;
+    width: 790px;
 }
