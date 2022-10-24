@@ -70,3 +70,19 @@ body {
     /* border: 1px solid white; */
     background-color: rgba(255, 255, 255, 0.288);
 }
+
+.navDots {
+    position: absolute;
+    bottom: 16px;
+
+    display: flex;
+    gap: 1rem;
+}
+
+/* Make circle with border radius */
+.dots {
+    height: 12px;
+    width: 12px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
