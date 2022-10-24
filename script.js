@@ -73,3 +73,18 @@ window.addEventListener("load", () => {
     let index = getImageIndex()[1];
     markUnmarkNavDot(index, 2);
 })
+
+navDotsList.forEach((nav) => {
+    nav.addEventListener("click", () => {
+        let dotIndex = Array.from(navDotsList).indexOf(nav);
+        changeImgWithNav(dotIndex);
+    });
+});
+
+function changeImgWithNav(imgIndex) {
+    let [img, index] = getImageIndex();
+    
+    img.src = `./images/${imgList[imgIndex]}`;
+    markUnmarkNavDot(imgIndex, index);
+    imgTransition(img);
+}
