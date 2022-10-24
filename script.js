@@ -7,12 +7,18 @@ const imgListLength = imgList.length;
 const previousImage = document.getElementById("previousImage");
 const nextImage = document.getElementById("nextImage");
 
-function showNextImage() {
-    
+function getImageIndex() {
     const imgLive = document.getElementById("carousel");
     const imgLiveSrc = imgLive.getAttribute("src").slice(9);
 
     let liveIndex = imgList.indexOf(imgLiveSrc);
+
+    return [imgLive, liveIndex];
+}
+
+function showNextImage() {
+    
+    let [imgLive, liveIndex] = getImageIndex();
     
     if (liveIndex === 4) {
         imgLive.src =  `./images/${imgList[0]}`;
@@ -29,10 +35,7 @@ function showNextImage() {
 
 function showPreviousImage() {
     
-    const imgLive = document.getElementById("carousel");
-    const imgLiveSrc = imgLive.getAttribute("src").slice(9);
-
-    let liveIndex = imgList.indexOf(imgLiveSrc);
+    let [imgLive, liveIndex] = getImageIndex();
     
     if (liveIndex === 0) {
         imgLive.src =  `./images/${imgList[4]}`;
