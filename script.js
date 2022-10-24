@@ -16,8 +16,16 @@ function getImageIndex() {
     return [imgLive, liveIndex];
 }
 
+function imgTransition(img) {
+    if (img.style.animationName === "myKey") {
+        img.style.animationName = "nKey";
+    } else {
+        img.style.animationName = "myKey"
+    }
+}
+
 function showNextImage() {
-    
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
     let [imgLive, liveIndex] = getImageIndex();
     
     if (liveIndex === 4) {
@@ -25,12 +33,8 @@ function showNextImage() {
     } else {
         imgLive.src = `./images/${imgList[liveIndex + 1]}`;
     }
-    // change(rotate) animation name to show the animation.
-    if (imgLive.style.animationName === "myKey") {
-        imgLive.style.animationName = "nKey";
-    } else {
-        imgLive.style.animationName = "myKey";
-    }
+
+    imgTransition(imgLive);
 }
 
 function showPreviousImage() {
@@ -43,11 +47,7 @@ function showPreviousImage() {
         imgLive.src = `./images/${imgList[liveIndex - 1]}`;
     }
     
-    if (imgLive.style.animationName === "myKey") {
-        imgLive.style.animationName = "nKey";
-    } else {
-        imgLive.style.animationName = "myKey";
-    }
+    imgTransition(imgLive);
 }
 
 previousImage.addEventListener("click", () => {
