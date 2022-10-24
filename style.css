@@ -36,6 +36,8 @@ body {
 #carousel {
     animation: nKey 1s ease-in-out;
     border-radius: 8px;
+    width: 474px;
+    height: 296px;
 }
 
 @keyframes myKey {
