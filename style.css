@@ -5,12 +5,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgb(0, 0, 0);
+    /* border: 2px solid rgb(0, 0, 0); */
     height: 800px;
 }
 
 .picFrame {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     width: 800px;
     height: 400px;
 
@@ -23,7 +23,7 @@ body {
 }
 
 .imgContainer {
-    border: 1px solid plum;
+    border: 1px solid rgb(250, 97, 250);
     width: 790px;
     height: 390px;
 }
@@ -54,6 +54,7 @@ body {
     justify-content: center;
 
     font-size: 2rem;
+    color: rgb(250, 97, 250);
 }
 
 #previousImage {
@@ -61,14 +62,14 @@ body {
 }
 
 #nextImage {
-    left: 740px;
+    left: 747px;
     /* border: 1px solid white; */
 }
 
 #previousImage:hover,
 #nextImage:hover {
     /* border: 1px solid white; */
-    background-color: rgba(255, 255, 255, 0.288);
+    background-color: rgba(250, 97, 250, 0.253);
 }
 
 .navDots {
@@ -83,6 +84,6 @@ body {
 .dots {
     height: 12px;
     width: 12px;
-    border: 1px solid white;
+    border: 1px solid rgb(250, 97, 250);
     border-radius: 50%;
 }

@@ -26,7 +26,7 @@ function imgTransition(img) {
 }
 
 function markUnmarkNavDot(index, liveImgIndex) {
-    navDotsList[index].style.background = "white";
+    navDotsList[index].style.background = "rgb(250, 97, 250)";
     navDotsList[liveImgIndex].style.background = "";
 }
 
