@@ -26,10 +26,16 @@ body {
     border: 1px solid rgb(250, 97, 250);
     width: 790px;
     height: 390px;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #carousel {
     animation: nKey 1s ease-in-out;
+    border-radius: 8px;
 }
 
 @keyframes myKey {
@@ -45,6 +51,7 @@ body {
 #previousImage,
 #nextImage {
     /* border: 1px solid black; */
+    border-radius: 8px;
     position: absolute;
     width: 50px;
     height: 390px;
