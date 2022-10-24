@@ -17,6 +17,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    /* To position next/previous image arrows properly */
+    position: relative;
 }
 
 .imgContainer {
@@ -39,9 +42,31 @@ body {
     to {opacity: 100;}
 }
 
-.arrowBtn {
+#previousImage,
+#nextImage {
+    /* border: 1px solid black; */
+    position: absolute;
+    width: 50px;
+    height: 390px;
+
     display: flex;
-    justify-content: space-between;
-    border: 1px solid green;
-    width: 790px;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+}
+
+#previousImage {
+    left: 4px;
+}
+
+#nextImage {
+    left: 740px;
+    /* border: 1px solid white; */
+}
+
+#previousImage:hover,
+#nextImage:hover {
+    /* border: 1px solid white; */
+    background-color: rgba(255, 255, 255, 0.288);
 }

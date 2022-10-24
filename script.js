@@ -4,8 +4,8 @@ const imgList = ['bird1.jpg', 'bird2.jpg', 'bird3.jpg',
 
 const imgListLength = imgList.length;
 
-const previousBtn = document.getElementById("previousBtn");
-const nextBtn = document.getElementById("nextBtn");
+const previousImage = document.getElementById("previousImage");
+const nextImage = document.getElementById("nextImage");
 
 function showNextImage() {
     
@@ -47,10 +47,10 @@ function showPreviousImage() {
     }
 }
 
-previousBtn.addEventListener("click", () => {
+previousImage.addEventListener("click", () => {
     showPreviousImage();
 });
 
-nextBtn.addEventListener("click", () => {
+nextImage.addEventListener("click", () => {
     showNextImage();
 })
