@@ -7,3 +7,4 @@ Skills demonstrated:
 Absolute positioning of elements.
 Simple animation with @keyframes.
 Animation with js.
+setInterval() to add timeout interval.
