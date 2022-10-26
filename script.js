@@ -80,15 +80,17 @@ navDotsList.forEach((nav) => {
     nav.addEventListener("click", () => {
         let dotIndex = Array.from(navDotsList).indexOf(nav);
         changeImgWithNav(dotIndex);
+        stopInterval();
     });
 });
 
 function changeImgWithNav(imgIndex) {
     let [img, index] = getImageIndex();
-    
-    img.src = `./images/${imgList[imgIndex]}`;
-    markUnmarkNavDot(imgIndex, index);
-    imgTransition(img);
+    if (!navDotsList[imgIndex].style.background) {
+        img.src = `./images/${imgList[imgIndex]}`;
+        markUnmarkNavDot(imgIndex, index);
+        imgTransition(img);
+    }
 }
 
 const imgInterval = setInterval(showNextImage, 5000);
