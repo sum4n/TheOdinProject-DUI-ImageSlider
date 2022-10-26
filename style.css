@@ -96,3 +96,7 @@ body {
     border: 1px solid rgb(250, 97, 250);
     border-radius: 50%;
 }
+
+.hidden {
+    display: none;
+}
