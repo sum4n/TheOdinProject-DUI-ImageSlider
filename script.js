@@ -63,10 +63,12 @@ function showPreviousImage() {
 
 previousImage.addEventListener("click", () => {
     showPreviousImage();
+    stopInterval();
 });
 
 nextImage.addEventListener("click", () => {
     showNextImage();
+    stopInterval();
 })
 
 window.addEventListener("load", () => {
@@ -89,6 +91,8 @@ function changeImgWithNav(imgIndex) {
     imgTransition(img);
 }
 
-const imgInterval = setInterval(() => {
-    showNextImage();
-}, 5000);
+const imgInterval = setInterval(showNextImage, 5000);
+
+function stopInterval() {
+    clearInterval(imgInterval);
+}
