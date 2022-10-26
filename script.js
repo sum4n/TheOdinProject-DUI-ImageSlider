@@ -88,3 +88,7 @@ function changeImgWithNav(imgIndex) {
     markUnmarkNavDot(imgIndex, index);
     imgTransition(img);
 }
+
+const imgInterval = setInterval(() => {
+    showNextImage();
+}, 5000);
